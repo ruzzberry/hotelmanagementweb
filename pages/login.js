@@ -3,6 +3,7 @@ import Link from "next/link";
 import { useRouter } from "next/router";
 
 export default function Login() {
+
   const router = useRouter();
 
   const gotoRegister = () => {
@@ -12,6 +13,7 @@ export default function Login() {
   const style = {
     linkStyle: {
       cursor: "pointer",
+      color: "#417D7A"
     },
   };
 
@@ -24,15 +26,9 @@ export default function Login() {
         flexDirection: "column",
         justifyContent: "center",
         alignItems: "center",
+        background: "#1A3C40",
       }}
     >
-      {/* TITLE SIGN IN */}
-      <Box>
-        <Typography variant="h5" sx={{ fontSize: "35px" }}>
-          Sign In
-        </Typography>
-      </Box>
-
       {/* FORM */}
       <Paper
         elevation={3}
@@ -41,26 +37,36 @@ export default function Login() {
           display: "flex",
           flexDirection: "column",
           marginTop: "12px",
+          background: "",
         }}
       >
+        <center>
+          <Typography variant="h5" 
+          sx={{ fontSize: "35px", 
+          marginBottom:"12px",
+          color:"#1A3C40"}}>
+            Sign In
+          </Typography>
+        </center>
+
         <TextField label="Email Address" name="email" type="email" />
         <TextField
           label="Password"
           name="password"
           type="password"
-          sx={{ marginTop: "12px" }}
+          sx={{ marginTop: "12px"}}
         />
 
-        <Button variant="contained" sx={{ marginTop: "12px" }}>
+        <Button variant="contained" 
+        sx={{ marginTop: "12px", 
+        background: "#417D7A"}}>
           Sign In
         </Button>
 
         {/* OPTIONS */}
-        <p sx={{ marginTop: "12px" }}>
-          Not yet a member? <Link href="/register">Sign up</Link>
-        </p>
-        {/*<Typography onClick={gotoRegister} sx={style.linkStyle}>Create new account</Typography>*/}
-        <Box></Box>
+        <Box sx={{display:"flex", justifyContent:"right", marginTop: "12px"}}>
+        <Typography variant="subtitle2" onClick={gotoRegister} sx={style.linkStyle}>Create new account</Typography>
+        </Box>
       </Paper>
     </Box>
   );

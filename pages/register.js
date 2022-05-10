@@ -12,6 +12,7 @@ export default function Register() {
   const style = {
     linkStyle: {
       cursor: "pointer",
+      color: "#417D7A"
     },
   };
 
@@ -24,13 +25,11 @@ export default function Register() {
         flexDirection: "column",
         justifyContent: "center",
         alignItems: "center",
+        background: "#1A3C40",
       }}
     >
       {/* TITLE SIGN IN */}
       <Box>
-        <Typography variant="h5" sx={{ fontSize: "35px" }}>
-          Sign Up
-        </Typography>
       </Box>
 
       {/* FORM */}
@@ -43,6 +42,18 @@ export default function Register() {
           marginTop: "12px",
         }}
       >
+        <center>
+          <Typography variant="h5" 
+          sx={{ 
+            fontSize: "35px",
+            color:"",
+            marginBottom:"12px",
+            color:"#1A3C40",
+          }}>
+            Sign Up
+          </Typography>
+        </center>
+
         <TextField label="Email Address" name="email" type="email" />
         <TextField
           label="Password"
@@ -57,16 +68,17 @@ export default function Register() {
           sx={{ marginTop: "12px" }}
         />
 
-        <Button variant="contained" sx={{ marginTop: "12px" }}>
+        <Button variant="contained" 
+        sx={{ marginTop: "12px",
+        background: "#417D7A"
+        }}>
           Sign up
         </Button>
 
         {/* OPTIONS */}
-        <p sx={{ marginTop: "12px" }}>
-          Already a member? <Link href="/login">Sign in</Link>
-        </p>
-        {/*<Typography onClick={gotoLogin} sx={style.linkStyle}>Already a member? Sign in</Typography>*/}
-        <Box></Box>
+        <Box sx={{display:"flex", justifyContent:"right", marginTop: "12px"}}>
+        <Typography variant="subtitle2" onClick={gotoLogin} sx={style.linkStyle}>Already a member? Sign in</Typography>
+        </Box>
       </Paper>
     </Box>
   );
