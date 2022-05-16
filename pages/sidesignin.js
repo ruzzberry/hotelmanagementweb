@@ -33,7 +33,7 @@ export default function SignInSide() {
         }}>
 
         <br/>
-        <Link href="/" variant="body2" sx={{color:"#FFFFFF", marginLeft:"30px"}}>
+        <Link href="/dashboard" variant="body2" sx={{color:"#FFFFFF", marginLeft:"30px"}}>
             {"HOTEL"}
         </Link>
 
