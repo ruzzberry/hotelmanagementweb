@@ -42,9 +42,9 @@ export default function AdminLayout({children}) {
                     fontSize:"24px",
                     lineHeight:"24px",
                     marginLeft:"10px"}}>Hotel Omega</Typography>
-
-                    <IconButton onClick={setDrawerOpen}>
-                    <Image src="/assets/svg/menu.svg" alt="Hotel Icon" 
+                    
+                    <IconButton onClick={setDrawerOpen} sx={{marginLeft:"75px"}}>
+                    <Image src="/assets/svg/menu.svg" alt="Burger Icon" 
                         width={25} 
                         height={25}/>
                     </IconButton>
