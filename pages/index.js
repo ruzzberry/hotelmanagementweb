@@ -1,15 +1,26 @@
-import {AppBar, Box, Drawer, Toolbar, Typography, IconButton, Divider, ButtonBase, List, ListItem, ListItemIcon, ListItemText} from "@mui/material";
-import Head from "next/head";
+import {Paper, AppBar, Box, Drawer, Toolbar, Typography, IconButton, Divider, ButtonBase, List, ListItem, ListItemIcon, ListItemText} from "@mui/material";
 import Image from "next/image";
 import global from "../styles/global";
 import { useRouter } from "next/router";
 import Button from '@mui/material/Button';
 import {useState} from "react";
 import Link from '@mui/material/Link';
+import Visitcarousel from "./visitcarousel";
+import Getstarted from "./getStarted";
+import { Title } from "@mui/icons-material";
+import Head from "next/head";
 
-export default function AdminLayout({children}) {
+export default function Index() {
 
     const router = useRouter();
+
+    const gotoAbout = () => {
+        router.push("/about");
+      };
+    
+      const gotoService = () => {
+        router.push("/services");
+      };
 
     const[open, setOpen] = useState(false);
 
@@ -27,7 +38,11 @@ export default function AdminLayout({children}) {
     }
 
     return(
-        <Box>
+        <Box sx={{backgroundColor:"#2B2B2B"}}>
+
+            <Head>
+                <title>Hotel Omega</title>
+            </Head>
             {/*FOR THE NAVIGATION BAR*/}
             <AppBar sx={{background:"#2B2B2B"}}>
                 <Toolbar>
@@ -44,40 +59,37 @@ export default function AdminLayout({children}) {
                     lineHeight:"24px",
                     marginLeft:"10px"}}>Hotel Omega</Typography>
 
-                    <Link href="#" underline="hover" color="inherit">
-                        <Typography 
-                        sx={{fontStyle:"normal", 
+                    
+                    <Typography onClick={gotoAbout}
+                        sx={{
+                        cursor:"pointer",
+                        fontStyle:"normal", 
                         fontWeight:"normal",
                         fontSize:"18px",
                         lineHeight:"24px",
-                        marginLeft:"350px"}}>ABOUT US</Typography>
-                    </Link>
+                        marginLeft:"420px"}}>ABOUT US
+                    </Typography>
 
-                    <Link href="#" underline="hover" color="inherit">
-                        <Typography 
-                        sx={{fontStyle:"normal", 
+                    <Typography onClick={gotoService}
+                        sx={{
+                        cursor:"pointer",
+                        fontStyle:"normal", 
                         fontWeight:"normal",
                         fontSize:"18px",
                         lineHeight:"24px",
-                        marginLeft:"50px"}}>CONTACTS</Typography>
-                    </Link>
+                        marginLeft:"50px"}}>SERVICES
+                    </Typography>
 
-                    <Link href="#" underline="hover" color="inherit">
-                        <Typography 
-                        sx={{fontStyle:"normal", 
-                        fontWeight:"normal",
-                        fontSize:"18px",
-                        lineHeight:"24px",
-                        marginLeft:"50px"}}>SERVICES</Typography>
-                    </Link>
-
-                    <IconButton onClick={setDrawerOpen} sx={{marginLeft:"450px"}}>
+                    <IconButton onClick={setDrawerOpen} sx={{marginLeft:"500px"}}>
                     <Image src="/assets/svg/menu.svg" alt="Burger Icon" 
                         width={25} 
                         height={25}/>
                     </IconButton>
                 </Toolbar>
             </AppBar>
+
+            {/*FOR THE CAROUSEL*/}
+            <Visitcarousel/>
 
             {/*FOR THE DRAWER*/}
             <Drawer anchor="right" open={open} onClose={HandleClose}>
@@ -109,30 +121,6 @@ export default function AdminLayout({children}) {
                             <ListItemText primary="ABOUT US"/>
                         </ListItem>
 
-                        <ListItem button 
-                        onClick={() => CloseHandleClick("/contacts")}
-                        selected={router.pathname.includes("contact")}>
-                            <ListItemIcon>
-                                <Image src="/assets/svg/contact.svg" 
-                                alt="Contact" 
-                                width={25} 
-                                height={25}/>
-                            </ListItemIcon>
-                            <ListItemText primary="CONTACTS"/>
-                        </ListItem>
-
-                        <ListItem button 
-                        onClick={() => CloseHandleClick("/comments")}
-                        selected={router.pathname.includes("comments")}>
-                            <ListItemIcon>
-                                <Image src="/assets/svg/review.svg" 
-                                alt="Review" 
-                                width={25} 
-                                height={25}/>
-                            </ListItemIcon>
-                            <ListItemText primary="REVIEWS"/>
-                        </ListItem>
-
                         <ListItem 
                         button 
                         onClick={() => CloseHandleClick("/services")}
@@ -151,18 +139,20 @@ export default function AdminLayout({children}) {
             </Drawer>
 
             <Box sx={{
-                marginTop:"60px",
+                marginTop:"5px",
                 backgroundImage: "url(https://wallpaperaccess.com/full/1687758.jpg)",
                 backgroundRepeat: "no-repeat",
                 backgroundColor: "white",
                 backgroundSize: "cover",
                 backgroundPosition: "center",
-                height:"100vh"}}>
-                
-                <Typography>Ruzle</Typography>
+                height:"40vh",
+                marginBottom:"12px"}}> 
+                    
+                <Divider align="center">
+                    <Getstarted/>
+                </Divider>
             </Box>
-        </Box>
 
-        
+        </Box>
     );
 };

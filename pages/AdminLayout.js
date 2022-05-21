@@ -93,18 +93,6 @@ export default function AdminLayout({children}) {
                             <ListItemText primary="CONTACTS"/>
                         </ListItem>
 
-                        <ListItem button 
-                        onClick={() => CloseHandleClick("/comments")}
-                        selected={router.pathname.includes("comments")}>
-                            <ListItemIcon>
-                                <Image src="/assets/svg/review.svg" 
-                                alt="Review" 
-                                width={25} 
-                                height={25}/>
-                            </ListItemIcon>
-                            <ListItemText primary="REVIEWS"/>
-                        </ListItem>
-
                         <ListItem 
                         button 
                         onClick={() => CloseHandleClick("/services")}

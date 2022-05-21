@@ -1,6 +1,5 @@
 import * as React from 'react';
 import Avatar from '@mui/material/Avatar';
-import Button from '@mui/material/Button';
 import TextField from '@mui/material/TextField';
 import FormControlLabel from '@mui/material/FormControlLabel';
 import Checkbox from '@mui/material/Checkbox';
@@ -9,6 +8,13 @@ import Paper from '@mui/material/Paper';
 import Box from '@mui/material/Box';
 import Grid from '@mui/material/Grid';
 import Typography from '@mui/material/Typography';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import {Button} from 'react-bootstrap';
+import { useRouter } from "next/router";
+import {IconButton, AppBar, Toolbar} from "@mui/material";
+import { Title } from "@mui/icons-material";
+import Head from "next/head";
+
 
 export default function SignInSide() {
   const handleSubmit = (event) => {
@@ -20,23 +26,50 @@ export default function SignInSide() {
     });
   };
 
+  const router = useRouter();
+
+      const gotoLandpage = () => {
+        router.push("/");
+      };
+
+      const gotoSignup = () => {
+        router.push("/sidesignup");
+      };
+
   return (
 
     
       <Grid container component="main" sx={{ height: '100vh'}}>
+        <Head>
+                <title>Sign In</title>
+        </Head>
+
         <Grid item xs={12} sm={8} md={5} component={Paper} elevation={6} square 
         sx={{
-            background:"#171010",
+            backgroundImage: "url(https://wallpaperaccess.com/full/1687758.jpg)",
             backgroundRepeat: "no-repeat",
             backgroundSize: "cover",
             backgroundPosition: "center",
         }}>
 
         <br/>
-        <Link href="/dashboard" variant="body2" sx={{color:"#FFFFFF", marginLeft:"30px"}}>
-            {"HOTEL"}
-        </Link>
+        <AppBar sx={{background:"#2B2B2B"}}>
+          <Toolbar>
+            <IconButton onClick={gotoLandpage}>
+                    <img src="/assets/svg/omegaicon.ico" alt="Hotel Icon" 
+                        width={45} 
+                        height={45}/>
+                    </IconButton>
 
+                    <Typography onClick={gotoLandpage}
+                    sx={{fontStyle:"normal", 
+                    fontWeight:"normal",
+                    fontSize:"24px",
+                    lineHeight:"24px",
+                    marginLeft:"10px",
+                    cursor:"pointer",}}>Hotel Omega</Typography>
+              </Toolbar>
+            </AppBar>
           <Box
             sx={{
               my: 14,
@@ -83,8 +116,8 @@ export default function SignInSide() {
               <Button
                 type="submit"
                 fullWidth
-                variant="outlined"
-                sx={{ mt: 3, mb: 2, background:"#2B2B2B", color:"#FFFFFF"}}
+                variant="dark"
+                style={{ width:"50vh",color:"#FFFFFF"}}
               >
                 Sign In
               </Button>
@@ -97,10 +130,14 @@ export default function SignInSide() {
                     Forgot password?
                   </Link>
                 </Grid>
-                <Grid item>
-                  <Link href="/sidesignup" variant="body2" sx={{color:"#2B2B2B"}}>
-                    {"Don't have an account? Sign Up"}
-                  </Link>
+                <Grid item >
+                  <Typography 
+                  variant="body2" 
+                  onClick={gotoSignup}
+                  sx={{
+                    cursor:"pointer",
+                    textDecoration: 'underline',
+                  }}>Don't have an account? Sign Up</Typography>
                 </Grid>
               </Grid>
             </Box>
