@@ -146,7 +146,7 @@ export default function Index() {
                 backgroundSize: "cover",
                 backgroundPosition: "center",
                 height:"40vh",
-                marginBottom:"12px"}}> 
+                }}> 
                     
                 <Divider align="center">
                     <Getstarted/>

@@ -76,7 +76,7 @@ export default function SignInSide() {
             }}
           >
 
-            <Box component="form" noValidate onSubmit={handleSubmit} sx={{ mt: 1, background:"white", padding: "24px"}}>
+            <Box component="form" noValidate onSubmit={handleSubmit} sx={{ mt: 1, background:"white", padding: "24px", marginTop:"95px"}}>
             
             {/*SIGN IN FORM*/}
 
