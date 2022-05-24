@@ -2,21 +2,11 @@ import { Title } from '@mui/icons-material';
 import React from 'react';
 import Userlayout from './userlayout';
 import Head from "next/head";
-import { Box, Divider } from '@mui/material';
-import Userhome from './userhome';
 import { useRouter } from "next/router";
+import { Box, Divider, Paper } from '@mui/material';
+import Suiteone from './suiteOne';
 
-function userdashboard() {
-
-  const router = useRouter();
-
-      const gotoRooms = () => {
-        router.push("/userrooms");
-      };
-
-      const gotoReservations = () => {
-        router.push("/userreservations");
-      };
+function Userrooms() {
 
   return (
     <Box 
@@ -32,14 +22,20 @@ function userdashboard() {
       
       <Userlayout/>
 
+      <Divider>
+        <Paper sx={{backgroundColor: "white", marginTop:"15vh", width:"100vh"}}>HOTEL ROOMS</Paper>
+      </Divider>
+      
       <Divider
       sx={{
         textAlign:"left",
+        justifyContent:"left",
       }}>
-        <Userhome/>
+        <Suiteone/>
       </Divider>
+      
     </Box>
   )
 }
 
-export default userdashboard;
+export default Userrooms;

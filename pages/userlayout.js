@@ -18,12 +18,12 @@ export default function Userlayout() {
         router.push("/userdashboard");
       };
 
-    const gotoAbout = () => {
-        router.push("/about");
+    const gotoRooms = () => {
+        router.push("/userrooms");
       };
     
-      const gotoService = () => {
-        router.push("/services");
+      const gotoReservations = () => {
+        router.push("/userreservations");
       };
 
     const[open, setOpen] = useState(false);
@@ -71,7 +71,7 @@ export default function Userlayout() {
                         marginLeft:"370px"}}>HOME
                     </Typography>
 
-                    <Typography onClick={gotoService}
+                    <Typography onClick={gotoRooms}
                         sx={{
                         cursor:"pointer",
                         fontStyle:"normal", 
@@ -81,7 +81,7 @@ export default function Userlayout() {
                         marginLeft:"50px"}}>ROOMS
                     </Typography>
                     
-                    <Typography onClick={gotoService}
+                    <Typography onClick={gotoReservations}
                         sx={{
                         cursor:"pointer",
                         fontStyle:"normal", 
@@ -104,9 +104,20 @@ export default function Userlayout() {
                 <Box minWidth={"200px"} sx={{display:"flex", flexDirection:"column"}}>
                     
                     <List sx={{marginTop:"55px"}}>
-                        
-                        <ListItem button onClick={() => CloseHandleClick("/rooms")}
-                        selected={router.pathname.includes("rooms")}>
+
+                    <ListItem button onClick={() => CloseHandleClick("/userdashboard")}
+                        selected={router.pathname.includes("userdashboard")}>
+                            <ListItemIcon>
+                                <Image src="/assets/svg/service.svg" 
+                                alt="Rooms" 
+                                width={25} 
+                                height={25}/>
+                            </ListItemIcon>
+                            <ListItemText primary="HOME"/>
+                        </ListItem>
+
+                        <ListItem button onClick={() => CloseHandleClick("/userrooms")}
+                        selected={router.pathname.includes("userrooms")}>
                             <ListItemIcon>
                                 <Image src="/assets/svg/service.svg" 
                                 alt="Rooms" 
@@ -118,8 +129,8 @@ export default function Userlayout() {
 
                         <ListItem 
                         button 
-                        onClick={() => CloseHandleClick("/reservations")}
-                        selected={router.pathname.includes("reservations")}>
+                        onClick={() => CloseHandleClick("/userreservations")}
+                        selected={router.pathname.includes("userreservations")}>
                             <ListItemIcon>
                                 <Image src="/assets/svg/service.svg" 
                                 alt="Reservations" 
