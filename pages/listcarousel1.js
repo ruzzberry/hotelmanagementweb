@@ -54,20 +54,7 @@ function Listcarousel1() {
 
   return (
     <Box sx={{ maxHeight:"400px",maxWidth: "540px", flexGrow: 1, float:"right",}}>
-      <Paper
-        square
-        elevation={0}
-        sx={{
-          display: 'flex',
-          alignItems: 'center',
-          height: 50,
-          pl: 2,
-          borderTopRightRadius:"20px", 
-          backgroundColor:"#FFFFFF",
-        }}
-      >
-        <Typography>{images[activeStep].label}</Typography>
-      </Paper>
+      
       <AutoPlaySwipeableViews
         axis={theme.direction === 'rtl' ? 'x-reverse' : 'x'}
         index={activeStep}
@@ -80,11 +67,12 @@ function Listcarousel1() {
               <Box
                 component="img"
                 sx={{
-                  height: "302px",
+                  height: "352px",
                   display: 'block',
                   maxWidth: "540px",
                   overflow: 'hidden',
                   width: '100%',
+                  borderTopRightRadius:"20px",
                 }}
                 src={step.imgPath}
                 alt={step.label}
