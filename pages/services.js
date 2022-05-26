@@ -146,8 +146,9 @@ export default function Services() {
                 backgroundColor: "white",
                 backgroundSize: "cover",
                 backgroundPosition: "center",
-                height:"40vh",
-                marginBottom:"12px"}}> 
+                height:"97.5vh",
+                marginBottom:"12px",
+                overflow: 'hidden',}}> 
                     
                 <Divider>
                     <Getstarted/>

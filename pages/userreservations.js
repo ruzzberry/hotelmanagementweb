@@ -3,7 +3,7 @@ import React from 'react';
 import Userlayout from './userlayout';
 import Head from "next/head";
 import { useRouter } from "next/router";
-import { Box, Divider } from '@mui/material';
+import { Box, Divider, Paper } from '@mui/material';
 import Userhome from './userhome';
 
 function Userrooms() {
@@ -12,15 +12,20 @@ function Userrooms() {
     <Box 
     sx={{
     backgroundImage: "url(https://wallpaperaccess.com/full/1687758.jpg)",
-    backgroundRepeat: "no-repeat",
-    backgroundSize: "cover",
+    backgroundRepeat: "repeat",
     backgroundPosition: "center",
-    height:"100vh"}}>
+    backgroundSize: "200vh",
+    height:"100vh",
+    overflow: 'hidden',}}>
       <Head>
         <title>Dashboard</title>
       </Head>
       
       <Userlayout/>
+
+      <Divider>
+        <Paper sx={{backgroundColor: "white", marginTop:"12vh", width:"100vh"}}>ROOMS RESERVED</Paper>
+      </Divider>
 
       <Divider
       sx={{

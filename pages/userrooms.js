@@ -3,8 +3,9 @@ import React from 'react';
 import Userlayout from './userlayout';
 import Head from "next/head";
 import { useRouter } from "next/router";
-import { Box, Divider, Paper } from '@mui/material';
+import { Box, Divider, Pagination, Paper } from '@mui/material';
 import Suiteone from './suiteOne';
+import Userpagination from './userPagination';
 
 function Userrooms() {
 
@@ -12,10 +13,12 @@ function Userrooms() {
     <Box 
     sx={{
     backgroundImage: "url(https://wallpaperaccess.com/full/1687758.jpg)",
-    backgroundRepeat: "no-repeat",
-    backgroundSize: "cover",
+    backgroundRepeat: "repeat",
     backgroundPosition: "center",
-    height:"100vh"}}>
+    backgroundSize: "200vh",
+    height:"170vh",
+    overflow: 'hidden',
+    }}>
       <Head>
         <title>Dashboard</title>
       </Head>
@@ -30,6 +33,7 @@ function Userrooms() {
       sx={{
         textAlign:"left",
         justifyContent:"left",
+        
       }}>
         <Suiteone/>
       </Divider>

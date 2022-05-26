@@ -150,10 +150,11 @@ export default function About() {
                 backgroundSize: "cover",
                 backgroundPosition: "center",
                 height:"50vh",
-                marginBottom:"12px"}}> 
+                marginBottom:"12px",
+                overflow: 'hidden',}}> 
                     
                 <Divider>
-                    <Paper sx={{backgroundColor: "white", marginTop:"10vh"}}>ABOUT</Paper>
+                    <Paper sx={{backgroundColor: "white", marginTop:"10vh",}}>ABOUT</Paper>
                     <Aboutaccordions/>
                 </Divider>
             </Box>

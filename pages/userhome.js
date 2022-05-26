@@ -10,7 +10,7 @@ function Userhome() {
         sx={{
             width:"100vh",
             height:"80vh",
-            marginTop:"15vh"
+            marginTop:"1vh"
         }}>
             <BasicTabs/>
         </Paper>

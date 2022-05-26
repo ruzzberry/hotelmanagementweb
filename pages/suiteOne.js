@@ -8,7 +8,7 @@ import { Button, CardActionArea, CardActions, Divider, Paper } from '@mui/materi
 export default function Suiteone() {
   return (
     <div>
-    <Card sx={{width: "1000px", height:"350px", marginTop:"35px" }}>
+    <Card sx={{width: "1000px", height:"320px", marginTop:"35px", }}>
       <CardActionArea>
         <CardMedia
           component="img"
@@ -38,17 +38,17 @@ export default function Suiteone() {
       </CardActions>
     </Card>
 
-    <Card sx={{width: "1000px", height:"350px", marginTop:"35px" }}>
+    <Card sx={{width: "1000px", height:"320px", marginTop:"35px" }}>
       <CardActionArea>
         <CardMedia
           component="img"
           height="140"
-          image="assets/img/carousel1.jpg"
-          alt="Suite 1"
+          image="assets/img/carousel2.jpg"
+          alt="Suite 2"
         />
         <CardContent>
           <Typography gutterBottom variant="h5" component="div">
-            Suite 1 - Php.9000
+            Suite 2 - Php.9000
           </Typography>
           <Typography variant="body2" color="text.secondary">
             ● Offers 2 queen size bed.
@@ -66,17 +66,17 @@ export default function Suiteone() {
           RENT NOW
         </Button>
       </CardActions>
-    </Card><Card sx={{width: "1000px", height:"350px", marginTop:"35px" }}>
+    </Card><Card sx={{width: "1000px", height:"320px", marginTop:"35px" }}>
       <CardActionArea>
         <CardMedia
           component="img"
           height="140"
-          image="assets/img/carousel1.jpg"
-          alt="Suite 1"
+          image="assets/img/carousel3.jpg"
+          alt="Suite 3"
         />
         <CardContent>
           <Typography gutterBottom variant="h5" component="div">
-            Suite 1 - Php.9000
+            Suite 3 - Php.9000
           </Typography>
           <Typography variant="body2" color="text.secondary">
             ● Offers 2 queen size bed.
