@@ -18,13 +18,13 @@ function Userrooms() {
     height:"100vh",
     overflow: 'hidden',}}>
       <Head>
-        <title>Dashboard</title>
+        <title>Suites Booked</title>
       </Head>
       
       <Userlayout/>
 
       <Divider>
-        <Paper sx={{backgroundColor: "white", marginTop:"12vh", width:"100vh"}}>ROOMS RESERVED</Paper>
+        <Paper sx={{backgroundColor: "white", marginTop:"12vh", width:"100vh"}}>SUITES BOOKED</Paper>
       </Divider>
 
       <Divider

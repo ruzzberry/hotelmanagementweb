@@ -8,6 +8,7 @@ import Userhometab1 from './userhometab1';
 import Userhometab2 from './userhometab2';
 import Userhometab3 from './userhometab3';
 
+
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
 
@@ -50,7 +51,7 @@ export default function BasicTabs() {
 
   return (
     <Box sx={{ width: '100%' }}>
-      <Box sx={{ borderBottom: 1, borderColor: 'divider', backgroundColor:"" }}>
+      <Box sx={{ borderBottom: 1, borderColor: 'divider',}}>
         <Tabs centered value={value} onChange={handleChange} aria-label="basic tabs example">
           <Tab label="HOTEL" {...a11yProps(0)} />
           <Tab label="FOODS" {...a11yProps(1)} />
@@ -58,15 +59,15 @@ export default function BasicTabs() {
         </Tabs>
       </Box>
       <TabPanel value={value} index={0}>
-      
+        <Userhometab1/>
       </TabPanel>
 
       <TabPanel value={value} index={1}>
-        <Userhometab2/>
+        
       </TabPanel>
 
       <TabPanel value={value} index={2}>
-      
+
       </TabPanel>
     </Box>
   );

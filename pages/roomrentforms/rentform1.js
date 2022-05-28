@@ -1,14 +1,13 @@
 import { Title } from '@mui/icons-material';
 import React from 'react';
-import Userlayout from './userlayout';
 import Head from "next/head";
 import { useRouter } from "next/router";
 import { Box, Divider, Pagination, Paper } from '@mui/material';
-import Room1official from './room1official';
-import Room2official from './room2official';
-import Room3official from './room3official';
+import Userlayout from '../userlayout';
+import Form1slider from './sliders/form1slider';
+import {Button} from 'react-bootstrap';
 
-function Userrooms() {
+function Rentform1() {
 
   return (
     <Box 
@@ -21,29 +20,28 @@ function Userrooms() {
     overflow: 'hidden',
     }}>
       <Head>
-        <title>Suites Offered</title>
+        <title>Suite 1</title>
       </Head>
       
       <Userlayout/>
 
       <Divider>
-        <Paper sx={{backgroundColor: "white", marginTop:"15vh", width:"100vh"}}>SUITES</Paper>
+        <Paper sx={{backgroundColor: "white", marginTop:"15vh", width:"100vh"}}>SUITE 1 RENT FORM</Paper>
       </Divider>
       
       <Divider
       sx={{
+        backgroundColor: "",
         textAlign:"left",
         justifyContent:"left",
-        
+        marginTop:"5vh"
       }}>
-        
-        <Room1official/>
-        <Room2official/>
-        <Room3official/>
+      
+      <Form1slider/>
       </Divider>
       
     </Box>
   )
 }
 
-export default Userrooms;
+export default Rentform1;

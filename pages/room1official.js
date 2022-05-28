@@ -5,8 +5,16 @@ import React from 'react';
 import SwipeableTextMobileStepper from './roomlistsliders/listcarousel1';
 import {Button} from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import { useRouter } from "next/router";
 
 function Room1official() {
+
+  const router = useRouter();
+
+      const gotoRentform1 = () => {
+        router.push("/roomrentforms/rentform1");
+      };
+
   return (
     <Box sx={{ marginTop:"15px",height: "400px", width:"1080px",borderRadius:"20px", backgroundColor:"#FFFFFF"}}>
         <SwipeableTextMobileStepper/>
@@ -38,7 +46,7 @@ function Room1official() {
             ● Has a nice view of the town from the window.
           </Typography>
 
-          <Button
+          <Button onClick={gotoRentform1}
                 fullWidth
                 variant="dark"
                 style={{ width:"20vh",marginLeft:"20px", marginTop:"150px",color:"#FFFFFF", }}

@@ -5,8 +5,16 @@ import React from 'react';
 import {Button} from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Listcarousel3 from './roomlistsliders/listcarousel3';
+import { useRouter } from "next/router";
 
 function Room3official() {
+
+  const router = useRouter();
+
+      const gotoRentform3 = () => {
+        router.push("/roomrentforms/rentform3");
+      };
+
   return (
     <Box sx={{ marginTop:"15px",height: "400px", width:"1080px",borderRadius:"20px", backgroundColor:"#FFFFFF"}}>
         <Listcarousel3/>
@@ -38,7 +46,7 @@ function Room3official() {
             ● Has a nice view of the town from the window.
           </Typography>
 
-          <Button
+          <Button onClick={gotoRentform3}
                 fullWidth
                 variant="dark"
                 style={{ width:"20vh",marginLeft:"20px", marginTop:"150px",color:"#FFFFFF", }}

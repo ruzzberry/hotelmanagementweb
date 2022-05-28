@@ -120,11 +120,11 @@ export default function Userlayout() {
                         selected={router.pathname.includes("userrooms")}>
                             <ListItemIcon>
                                 <Image src="/assets/svg/service.svg" 
-                                alt="Rooms" 
+                                alt="Suites" 
                                 width={25} 
                                 height={25}/>
                             </ListItemIcon>
-                            <ListItemText primary="ROOMS"/>
+                            <ListItemText primary="SUITES"/>
                         </ListItem>
 
                         <ListItem 

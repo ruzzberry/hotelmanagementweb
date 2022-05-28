@@ -9,6 +9,7 @@ import KeyboardArrowLeft from '@mui/icons-material/KeyboardArrowLeft';
 import KeyboardArrowRight from '@mui/icons-material/KeyboardArrowRight';
 import SwipeableViews from 'react-swipeable-views';
 import { autoPlay } from 'react-swipeable-views-utils';
+import { useRouter } from "next/router";
 
 const AutoPlaySwipeableViews = autoPlay(SwipeableViews);
 
@@ -16,22 +17,22 @@ const images = [
   {
     label: 'San Francisco – Oakland Bay Bridge, United States',
     imgPath:
-      'https://via.placeholder.com/540x352.png/FDE5B4/FFFFFF/?text=Ruzle%27s+Placeholder+1',
+      'https://via.placeholder.com/540x352.png/FDE5B4/000000/?text=Ruzle%27s+Placeholder+1',
   },
   {
     label: 'Bird',
     imgPath:
-      'https://via.placeholder.com/540x352.png/FFCBA5/FFFFFF/?text=Ruzle%27s+Placeholder+2',
+      'https://via.placeholder.com/540x352.png/FFCBA5/000000/?text=Ruzle%27s+Placeholder+2',
   },
   {
     label: 'Bali, Indonesia',
     imgPath:
-      'https://via.placeholder.com/540x352.png/FFC8C4/FFFFFF/?text=Ruzle%27s+Placeholder+3',
+      'https://via.placeholder.com/540x352.png/FFC8C4/000000/?text=Ruzle%27s+Placeholder+3',
   },
   {
     label: 'Goč, Serbia',
     imgPath:
-      'https://via.placeholder.com/540x352.png/FF9899/FFFFFF/?text=Ruzle%27s+Placeholder+4',
+      'https://via.placeholder.com/540x352.png/FF9899/000000/?text=Ruzle%27s+Placeholder+4',
   },
 ];
 
@@ -52,6 +53,13 @@ function Listcarousel1() {
     setActiveStep(step);
   };
 
+
+  const router = useRouter();
+
+      const gotoRentform1 = () => {
+        router.push("/");
+      };
+      
   return (
     <Box sx={{ maxHeight:"400px",maxWidth: "540px", flexGrow: 1, float:"right",}}>
       
@@ -82,8 +90,7 @@ function Listcarousel1() {
         ))}
       </AutoPlaySwipeableViews>
       <MobileStepper
-        sx={{
-        borderBottomRightRadius:"20px", 
+        sx={{ 
         backgroundColor:"#FFFFFF",}}
         steps={maxSteps}
         position="static"
