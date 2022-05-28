@@ -4,8 +4,9 @@ import Userlayout from './userlayout';
 import Head from "next/head";
 import { useRouter } from "next/router";
 import { Box, Divider, Pagination, Paper } from '@mui/material';
-import Suiteone from './suiteOne';
-import Userpagination from './userPagination';
+import Room1official from './room1official';
+import Room2official from './room2official';
+import Room3official from './room3official';
 
 function Userrooms() {
 
@@ -16,7 +17,7 @@ function Userrooms() {
     backgroundRepeat: "repeat",
     backgroundPosition: "center",
     backgroundSize: "200vh",
-    height:"170vh",
+    height:"195vh",
     overflow: 'hidden',
     }}>
       <Head>
@@ -35,7 +36,10 @@ function Userrooms() {
         justifyContent:"left",
         
       }}>
-        <Suiteone/>
+        
+        <Room1official/>
+        <Room2official/>
+        <Room3official/>
       </Divider>
       
     </Box>

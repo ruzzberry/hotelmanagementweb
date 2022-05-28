@@ -16,26 +16,26 @@ const images = [
   {
     label: 'San Francisco – Oakland Bay Bridge, United States',
     imgPath:
-      'https://images.unsplash.com/photo-1537944434965-cf4679d1a598?auto=format&fit=crop&w=400&h=250&q=60',
+      'https://via.placeholder.com/540x352.png/FDE5B4/FFFFFF/?text=Ruzle%27s+Placeholder+1',
   },
   {
     label: 'Bird',
     imgPath:
-      'https://images.unsplash.com/photo-1538032746644-0212e812a9e7?auto=format&fit=crop&w=400&h=250&q=60',
+      'https://via.placeholder.com/540x352.png/FFCBA5/FFFFFF/?text=Ruzle%27s+Placeholder+2',
   },
   {
     label: 'Bali, Indonesia',
     imgPath:
-      'https://images.unsplash.com/photo-1537996194471-e657df975ab4?auto=format&fit=crop&w=400&h=250&q=80',
+      'https://via.placeholder.com/540x352.png/FFC8C4/FFFFFF/?text=Ruzle%27s+Placeholder+3',
   },
   {
     label: 'Goč, Serbia',
     imgPath:
-      'https://images.unsplash.com/photo-1512341689857-198e7e2f3ca8?auto=format&fit=crop&w=400&h=250&q=60',
+      'https://via.placeholder.com/540x352.png/FF9899/FFFFFF/?text=Ruzle%27s+Placeholder+4',
   },
 ];
 
-function Listcarousel1() {
+function Listcarousel2() {
   const theme = useTheme();
   const [activeStep, setActiveStep] = React.useState(0);
   const maxSteps = images.length;
@@ -117,4 +117,4 @@ function Listcarousel1() {
   );
 }
 
-export default Listcarousel1;
+export default Listcarousel2;
