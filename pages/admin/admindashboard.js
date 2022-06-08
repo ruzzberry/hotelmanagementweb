@@ -41,7 +41,6 @@ export default function Admindashboard(){
       
 return(
     
-/* <div style={{ height: 400, width: '90%' }}> */
 <Box component="main" sx={{marginLeft:"100px", marginTop: "100px", flexGrow: 1, p: 3, height: 450, width: '90%' }}>
 <AdminDrawer/>
         <DataGrid
@@ -52,5 +51,6 @@ return(
           checkboxSelection
         />
         </Box>
-);
+    );
+
 }
