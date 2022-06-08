@@ -183,7 +183,7 @@ export default function MiniDrawer() {
       transformOrigin={{
         vertical: 'top',
         horizontal: 'right',
-      }}
+      }}    
       open={isMobileMenuOpen}
       onClose={handleMobileMenuClose}
     >
@@ -376,6 +376,15 @@ export default function MiniDrawer() {
         </List>
       </Drawer>
 
+      <Box component="main" sx={{ flexGrow: 1, p: 3 }}>
+        <DrawerHeader />
+        <Typography paragraph>
+          asds.
+        </Typography>
+        <Typography paragraph>
+          asdsad.
+        </Typography>
+      </Box>
     </Box>
   );
 }

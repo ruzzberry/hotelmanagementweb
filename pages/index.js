@@ -135,6 +135,18 @@ export default function Index() {
                             <ListItemText primary="SERVICES"/>
                         </ListItem>
 
+                        <ListItem sx={{marginTop: "600px"}}
+                        button 
+                        onClick={() => CloseHandleClick("/services")}
+                        selected={router.pathname.includes("services")}>
+                            <ListItemIcon>
+                                <Image src="/assets/svg/signin.svg"
+                                alt="LogAdmin" 
+                                width={25} 
+                                height={25}/>
+                            </ListItemIcon>
+                            <ListItemText primary="LOGIN AS ADMIN"/>
+                        </ListItem>
                     </List>
                 </Box>
             </Drawer>
