@@ -130,7 +130,7 @@ export default function SignInSide() {
 
               <Grid container>
                 <Grid item xs>
-                  <Link onClick={gotoForgetpass} variant="body2" sx={{color:"#2B2B2B"}} disable>
+                  <Link onClick={gotoForgetpass} variant="body2" sx={{color:"#2B2B2B", cursor:"pointer"}} disable>
                     Forgot password?
                   </Link>
                 </Grid>
