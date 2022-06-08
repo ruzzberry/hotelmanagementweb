@@ -49,6 +49,11 @@ export default function Admindashboard(){
         router.push("/admin/adminadd");
       };
       
+      const gotoAdminEdit = () => {
+        router.push("/admin/adminedit");
+        
+      };
+
 return(
     
 <Box component="main" sx={{marginLeft:"100px", marginTop: "100px", flexGrow: 1, p: 3, height: 450, width: '90%' }}>
@@ -67,7 +72,7 @@ return(
   alignItems="flex-end"
 >
         <Button variant="outlined" color="success" onClick={gotoAdminadd}>Add</Button>
-        <Button variant="outlined" sx={{marginLeft:"10px"}}>Edit</Button>
+        <Button variant="outlined" sx={{marginLeft:"10px"}} onClick={gotoAdminEdit}>Edit</Button>
         <Button variant="outlined" color="error" sx={{marginLeft:"10px"}}>Delete</Button>
         </Box>
         </Box>
