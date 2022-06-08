@@ -124,7 +124,7 @@ export default function SignInSide() {
                 variant="dark"
                 style={{width:"71vh",color:"#FFFFFF", position:"center"}}
               >
-                Sign In
+                Sign Up
               </Button>
 
               {/*FOR OPTIONS*/}
