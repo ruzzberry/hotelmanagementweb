@@ -2,6 +2,8 @@ import AdminDrawer from "./admindrawer";
 import * as React from 'react';
 import { DataGrid } from '@mui/x-data-grid';
 import Box from '@mui/material/Box';
+import Button from '@mui/material/Button';
+import { useRouter } from "next/router";
 
 const columns = [
     { field: 'id', headerName: 'ID', width: 70 },
@@ -37,7 +39,15 @@ const columns = [
   ];
 
 
+  
+
 export default function Admindashboard(){   
+  
+  const router = useRouter();
+
+      const gotoAdminadd = () => {
+        router.push("/admin/adminadd");
+      };
       
 return(
     
@@ -50,6 +60,16 @@ return(
           rowsPerPageOptions={[5]}
           checkboxSelection
         />
+        <Box
+  m={1}
+  display="flex"
+  justifyContent="flex-end"
+  alignItems="flex-end"
+>
+        <Button variant="outlined" color="success" onClick={gotoAdminadd}>Add</Button>
+        <Button variant="outlined" sx={{marginLeft:"10px"}}>Edit</Button>
+        <Button variant="outlined" color="error" sx={{marginLeft:"10px"}}>Delete</Button>
+        </Box>
         </Box>
     );
 
