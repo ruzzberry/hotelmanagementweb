@@ -40,6 +40,10 @@ export default function SignInSide() {
         router.push("/sideforgetpass");
       };
 
+      const gotoUserdash = () => {
+        router.push("/userdashboard");
+      };
+
   return (
 
     
@@ -121,7 +125,7 @@ export default function SignInSide() {
                 type="submit"
                 fullWidth
                 variant="dark"
-                style={{ width:"50vh",color:"#FFFFFF"}}
+                style={{ width:"50vh",color:"#FFFFFF"}} onClick={gotoUserdash}
               >
                 Sign In
               </Button>
