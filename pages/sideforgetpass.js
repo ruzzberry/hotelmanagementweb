@@ -36,16 +36,12 @@ export default function SignInSide() {
         router.push("/sidesignup");
       };
 
-      const gotoForgetpass = () => {
-        router.push("/sideforgetpass");
-      };
-
   return (
 
     
       <Grid container component="main" sx={{ height: '100vh'}}>
         <Head>
-                <title>Sign In</title>
+                <title>Forgot Password</title>
         </Head>
 
         <Grid item xs={12} sm={8} md={5} component={Paper} elevation={6} square 
@@ -90,7 +86,7 @@ export default function SignInSide() {
 
             <center>
                 <Typography component="h1" variant="h5">
-                    Sign in
+                    Forgot Password
                 </Typography>
             </center>
               <TextField
@@ -103,47 +99,26 @@ export default function SignInSide() {
                 autoComplete="email"
                 autoFocus
               />
-              <TextField
-                margin="normal"
-                required
-                fullWidth
-                name="password"
-                label="Password"
-                type="password"
-                id="password"
-                autoComplete="current-password"
-              />
-              <FormControlLabel
-                control={<Checkbox value="remember" color="primary" />}
-                label="Remember me"
-              />
+               <Grid container justify="center">
               <Button
                 type="submit"
                 fullWidth
                 variant="dark"
                 style={{ width:"50vh",color:"#FFFFFF"}}
               >
-                Sign In
+                Submit
               </Button>
-
+              </Grid>
               {/*FOR OPTIONS*/}
 
-              <Grid container>
-                <Grid item xs>
-                  <Link onClick={gotoForgetpass} variant="body2" sx={{color:"#2B2B2B"}} disable>
-                    Forgot password?
-                  </Link>
-                </Grid>
-                <Grid item >
-                  <Typography 
+              <Typography
+              align="center" 
                   variant="body2" 
                   onClick={gotoSignup}
                   sx={{
                     cursor:"pointer",
                     textDecoration: 'underline',
                   }}>Don't have an account? Sign Up</Typography>
-                </Grid>
-              </Grid>
             </Box>
           </Box>
         </Grid>

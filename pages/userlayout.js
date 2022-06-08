@@ -45,22 +45,22 @@ export default function Userlayout() {
         <Box sx={{backgroundColor:"#2B2B2B"}}>
             {/*FOR THE NAVIGATION BAR*/}
             <AppBar sx={{background:"#2B2B2B"}}>
-                <Toolbar>
-                    <IconButton onClick={gotoHome}>
+                <Toolbar disableGutters
+          sx={{
+            display: { xs: "flex" },
+            flexDirection: "row",
+            justifyContent: "space-between"
+          }}>
+                    <Typography 
+                    sx={{fontStyle:"normal", 
+                    fontWeight:"normal",
+                    fontSize:"24px"}}><IconButton sx={{marginRight:"15px"}}>
                     <Image src="/assets/svg/omegaicon.ico" alt="Hotel Icon" 
                         width={45} 
                         height={45}/>
-                    </IconButton>
+                    </IconButton>Hotel Omega</Typography>
 
-                    <Typography onClick={gotoHome} 
-                    sx={{fontStyle:"normal", 
-                    fontWeight:"normal",
-                    fontSize:"24px",
-                    lineHeight:"24px",
-                    marginLeft:"10px",
-                    cursor:"pointer"}}>Hotel Omega</Typography>
-
-                    
+                    <Toolbar>
                     <Typography onClick={gotoHome}
                         sx={{
                         cursor:"pointer",
@@ -68,7 +68,7 @@ export default function Userlayout() {
                         fontWeight:"normal",
                         fontSize:"18px",
                         lineHeight:"24px",
-                        marginLeft:"370px"}}>HOME
+                        marginLeft:"18px"}}>HOME
                     </Typography>
 
                     <Typography onClick={gotoRooms}
@@ -78,7 +78,7 @@ export default function Userlayout() {
                         fontWeight:"normal",
                         fontSize:"18px",
                         lineHeight:"24px",
-                        marginLeft:"50px"}}>ROOMS
+                        marginLeft:"18px"}}>ROOMS
                     </Typography>
                     
                     <Typography onClick={gotoReservations}
@@ -88,14 +88,15 @@ export default function Userlayout() {
                         fontWeight:"normal",
                         fontSize:"18px",
                         lineHeight:"24px",
-                        marginLeft:"50px"}}>RESERVATIONS
+                        marginLeft:"18px"}}>RESERVATIONS
                     </Typography>
 
-                    <IconButton onClick={setDrawerOpen} sx={{marginLeft:"450px"}}>
+                    <IconButton onClick={setDrawerOpen} sx={{marginLeft:"50px"}}>
                     <Image src="/assets/svg/menu.svg" alt="Burger Icon" 
                         width={25} 
                         height={25}/>
                     </IconButton>
+                    </Toolbar>
                 </Toolbar>
             </AppBar>
 
