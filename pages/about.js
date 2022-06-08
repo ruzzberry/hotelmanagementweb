@@ -49,47 +49,49 @@ export default function About() {
             </Head>
             {/*FOR THE NAVIGATION BAR*/}
             <AppBar sx={{background:"#2B2B2B"}}>
-                <Toolbar>
-                    <IconButton onClick={gotoLandpage}>
+            <Toolbar disableGutters
+          sx={{
+            display: { xs: "flex" },
+            flexDirection: "row",
+            justifyContent: "space-between"
+          }}>
+
+                    <Typography 
+                    sx={{fontStyle:"normal", 
+                    fontWeight:"normal",
+                    fontSize:"24px"}}><IconButton sx={{marginRight:"15px"}} onClick={gotoLandpage}>
                     <Image src="/assets/svg/omegaicon.ico" alt="Hotel Icon" 
                         width={45} 
                         height={45}/>
-                    </IconButton>
+                    </IconButton>Hotel Omega</Typography>
 
-                    <Typography onClick={gotoLandpage}
-                    sx={{fontStyle:"normal", 
-                    fontWeight:"normal",
-                    fontSize:"24px",
-                    lineHeight:"24px",
-                    marginLeft:"10px",
-                    cursor:"pointer",}}>Hotel Omega</Typography>
-
-                    
-                        <Typography display="inline"
-                        sx={{fontStyle:"normal", 
+                    <Toolbar>
+                    <Typography onClick={gotoAbout}
+                        sx={{
+                        textDecoration: 'underline',
+                        cursor:"pointer",
+                        fontStyle:"normal", 
                         fontWeight:"normal",
-                        fontSize:"18px",
-                        lineHeight:"24px",
-                        marginLeft:"400px",
-                        textDecoration: 'underline'
-                        }}>ABOUT US</Typography>
-                    
+                        fontSize:"18px"}} >ABOUT US
+                    </Typography>
+
                     <Typography onClick={gotoService}
                         sx={{
                         cursor:"pointer",
                         fontStyle:"normal", 
                         fontWeight:"normal",
                         fontSize:"18px",
-                        lineHeight:"24px",
                         marginLeft:"50px"}}>SERVICES
                     </Typography>
-
-                    <IconButton onClick={setDrawerOpen} sx={{marginLeft:"500px"}}>
+            
+                    <IconButton onClick={setDrawerOpen} sx={{marginLeft:"50px"}}>
                     <Image src="/assets/svg/menu.svg" alt="Burger Icon" 
                         width={25} 
                         height={25}/>
                     </IconButton>
+                    </Toolbar>
                 </Toolbar>
+             
             </AppBar>
             
             {/*FOR THE CAROUSEL*/}

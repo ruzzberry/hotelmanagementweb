@@ -45,29 +45,29 @@ export default function Index() {
             </Head>
             {/*FOR THE NAVIGATION BAR*/}
             <AppBar sx={{background:"#2B2B2B"}}>
-                <Toolbar>
-                    <IconButton>
-                    <Image src="/assets/svg/omegaicon.ico" alt="Hotel Icon" 
-                        width={45} 
-                        height={45}/>
-                    </IconButton>
+                <Toolbar disableGutters
+          sx={{
+            display: { xs: "flex" },
+            flexDirection: "row",
+            justifyContent: "space-between"
+          }}>
 
                     <Typography 
                     sx={{fontStyle:"normal", 
                     fontWeight:"normal",
-                    fontSize:"24px",
-                    lineHeight:"24px",
-                    marginLeft:"10px"}}>Hotel Omega</Typography>
+                    fontSize:"24px"}}><IconButton sx={{marginRight:"15px"}}>
+                    <Image src="/assets/svg/omegaicon.ico" alt="Hotel Icon" 
+                        width={45} 
+                        height={45}/>
+                    </IconButton>Hotel Omega</Typography>
 
-                    
+                    <Toolbar>
                     <Typography onClick={gotoAbout}
                         sx={{
                         cursor:"pointer",
                         fontStyle:"normal", 
                         fontWeight:"normal",
-                        fontSize:"18px",
-                        lineHeight:"24px",
-                        marginLeft:"420px"}}>ABOUT US
+                        fontSize:"18px"}} >ABOUT US
                     </Typography>
 
                     <Typography onClick={gotoService}
@@ -76,16 +76,17 @@ export default function Index() {
                         fontStyle:"normal", 
                         fontWeight:"normal",
                         fontSize:"18px",
-                        lineHeight:"24px",
                         marginLeft:"50px"}}>SERVICES
                     </Typography>
-
-                    <IconButton onClick={setDrawerOpen} sx={{marginLeft:"500px"}}>
+            
+                    <IconButton onClick={setDrawerOpen} sx={{marginLeft:"50px"}}>
                     <Image src="/assets/svg/menu.svg" alt="Burger Icon" 
                         width={25} 
                         height={25}/>
                     </IconButton>
+                    </Toolbar>
                 </Toolbar>
+             
             </AppBar>
 
             {/*FOR THE CAROUSEL*/}
