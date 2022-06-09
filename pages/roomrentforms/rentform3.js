@@ -26,7 +26,7 @@ function Rentform3() {
       <Userlayout/>
 
       <Divider>
-        <Paper sx={{backgroundColor: "white", marginTop:"15vh", width:"100vh"}}>SUITE 1 RENT FORM</Paper>
+        <Paper sx={{backgroundColor: "white", marginTop:"15vh", width:"100vh"}}>SUITE 3 RENT FORM</Paper>
       </Divider>
       
       <Divider

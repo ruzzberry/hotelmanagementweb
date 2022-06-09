@@ -15,24 +15,24 @@ const AutoPlaySwipeableViews = autoPlay(SwipeableViews);
 
 const images = [
   {
-    label: 'San Francisco – Oakland Bay Bridge, United States',
+    label: 'view 1',
     imgPath:
-      'https://via.placeholder.com/540x352.png/FDE5B4/000000/?text=Ruzle%27s+Placeholder+1',
+      'https://blackmonarchhotel.com/wp-content/uploads/2019/05/bathory2.jpg',
   },
   {
-    label: 'Bird',
+    label: 'view 2',
     imgPath:
-      'https://via.placeholder.com/540x352.png/FFCBA5/000000/?text=Ruzle%27s+Placeholder+2',
+      'https://blackmonarchhotel.com/wp-content/uploads/2019/05/E4622C65-FF10-4B48-A1CA-FA507FD2AD50.jpg',
   },
   {
-    label: 'Bali, Indonesia',
+    label: 'view 3',
     imgPath:
-      'https://via.placeholder.com/540x352.png/FFC8C4/000000/?text=Ruzle%27s+Placeholder+3',
+      'https://blackmonarchhotel.com/wp-content/uploads/2019/05/8CA1C422-2375-4924-B616-D5779DAE3C1D.jpg',
   },
   {
-    label: 'Goč, Serbia',
+    label: 'view 4',
     imgPath:
-      'https://via.placeholder.com/540x352.png/FF9899/000000/?text=Ruzle%27s+Placeholder+4',
+      'https://blackmonarchhotel.com/wp-content/uploads/2019/05/B5DD52A4-4323-4B87-AA24-915D7C7995E0.jpg',
   },
 ];
 

@@ -13,7 +13,7 @@ function Form1slider() {
         
         <Box sx={{ height: "400px", maxWidth:"540px", borderTopLeftRadius:"20px", backgroundColor:"#FFFFFF"}}>
           <Typography variant="h4" sx={{marginLeft:"10px",color:"#000000"}}>
-            Suite 1 - Queen Elizabeth
+            Suite 1 - Prince Ruzle Suite
           </Typography>
 
           <Typography variant="h5" sx={{marginLeft:"10px",color:"#000000"}}>

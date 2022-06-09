@@ -21,7 +21,7 @@ function Room3official() {
         
         <Box sx={{ height: "400px", maxWidth:"540px", borderTopLeftRadius:"20px",borderBottomLeftRadius:"20px", backgroundColor:"#FFFFFF"}}>
           <Typography variant="h4" sx={{marginLeft:"10px",color:"#000000"}}>
-            Suite 3 - Queen Elizabeth
+            Suite 3 - Prince Ian Suite
           </Typography>
 
           <Typography variant="h5" sx={{marginLeft:"10px",color:"#000000"}}>

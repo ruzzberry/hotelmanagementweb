@@ -2,18 +2,18 @@ import { AddBox } from '@mui/icons-material';
 import { Divider, Grid, TextField, Typography } from '@mui/material';
 import { Box } from '@mui/system';
 import React from 'react';
-import Listcarousel1 from '../../roomlistsliders/listcarousel1';
+import Listcarousel2 from '../../roomlistsliders/listcarousel2';
 import {Button} from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 function Form1slider() {
   return (
     <Box sx={{height: "400px", width:"1080px",borderRadius:"20px", backgroundColor:"#FFFFFF"}}>
-        <Listcarousel1/>
+        <Listcarousel2/>
         
         <Box sx={{ height: "400px", maxWidth:"540px", borderTopLeftRadius:"20px", backgroundColor:"#FFFFFF"}}>
           <Typography variant="h4" sx={{marginLeft:"10px",color:"#000000"}}>
-            Suite 2 - Queen Elizabeth
+            Suite 2 - Prince Patrick Suite
           </Typography>
 
           <Typography variant="h5" sx={{marginLeft:"10px",color:"#000000"}}>
